@@ -285,7 +285,6 @@ figcaption { margin-top: 9px; color: var(--muted); font-size: 12px; line-height:
 .metrics span { font-family: Georgia, "Times New Roman", serif; font-size: 47px; line-height: 1; }
 .metrics strong { margin-left: 3px; font-size: 15px; }
 .metrics p { margin: 10px 0 0; color: var(--muted); font-size: 12px; line-height: 1.45; }
-.result-figure { margin-bottom: 75px; }
 .result-gallery-heading {
   display: flex;
   justify-content: space-between;
