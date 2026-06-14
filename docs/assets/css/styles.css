@@ -70,9 +70,35 @@ code, pre { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospac
   justify-self: center;
   white-space: nowrap;
 }
-.authors .contribution-mark,
+.authors .author-link {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 150ms ease;
+}
+.authors .author-link:hover,
+.authors .author-link:focus-visible {
+  text-decoration-color: currentColor;
+}
+.authors .author-mark,
 .authors .author-note {
   color: var(--contribution);
+}
+.authors .author-mark {
+  margin-left: 1px;
+  font-size: 0.72em;
+}
+.authors .affiliations {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.authors .affiliations sup {
+  margin-right: 2px;
+  color: var(--contribution);
+  font-size: 0.72em;
 }
 .authors .author-note {
   margin-top: 5px;
