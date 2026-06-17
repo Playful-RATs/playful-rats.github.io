@@ -342,7 +342,13 @@ figcaption { margin-top: 9px; color: var(--muted); font-size: 12px; line-height:
 }
 .analysis-row figure img { width: 100%; border: 1px solid var(--line); background: white; }
 .citation-box { position: relative; border: 1px solid var(--ink); background: #202220; color: #f3f4f2; }
-.citation-box p { margin: 0; padding: 30px; font-size: 13px; }
+.citation-box pre {
+  margin: 0;
+  padding: 30px;
+  overflow-wrap: anywhere;
+  font-size: 13px;
+  white-space: pre-wrap;
+}
 .back-to-top {
   position: fixed;
   right: 20px;
