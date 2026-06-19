@@ -514,7 +514,7 @@ footer p { max-width: 460px; margin: 0; text-align: right; }
   .prose .lead { font-size: 22px; }
   .method-grid, .detail-grid, .result-groups {
     grid-auto-flow: column;
-    grid-auto-columns: clamp(280px, 82vw, 420px);
+    grid-auto-columns: clamp(170px, 48vw, 220px);
     grid-template-columns: none;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
@@ -528,12 +528,22 @@ footer p { max-width: 460px; margin: 0; text-align: right; }
   .method-grid::-webkit-scrollbar-track, .detail-grid::-webkit-scrollbar-track, .result-groups::-webkit-scrollbar-track { background: var(--soft); }
   .method-grid::-webkit-scrollbar-thumb, .detail-grid::-webkit-scrollbar-thumb, .result-groups::-webkit-scrollbar-thumb { background: var(--verify); border-radius: 5px; }
   .method-stage, .detail-grid article, .result-group { scroll-snap-align: start; }
-  .method-stage { min-height: 270px; padding: 20px; }
-  .detail-grid article { min-height: 280px; padding: 20px; }
-  .result-group-heading { padding: 20px; }
-  .result-group-heading h3 { font-size: 27px; }
-  .metrics article { padding: 20px 15px; }
-  .metrics span { font-size: 40px; }
+  .result-groups { grid-auto-columns: clamp(190px, 52vw, 250px); }
+  .result-group, .result-group-heading, .metrics, .metrics article { min-width: 0; }
+  .method-stage { min-height: 225px; padding: 13px; }
+  .detail-grid article { min-height: 235px; padding: 13px; }
+  .method-stage h3, .detail-grid h3 { font-size: 20px; }
+  .method-stage .panel-number { margin-bottom: 8px; font-size: 30px; }
+  .team-step-number { margin-bottom: 5px; font-size: 22px; }
+  .detail-grid b { margin-bottom: 7px; font-size: 9px; }
+  .method-stage p:not(.panel-number), .detail-grid p { margin: 7px 0 0; font-size: 11px; line-height: 1.4; }
+  .result-group-heading { padding: 13px; }
+  .result-group-heading h3 { font-size: 20px; }
+  .result-group-heading > p:last-child { margin-top: 7px; font-size: 11px; line-height: 1.4; }
+  .metrics article { padding: 13px 8px; }
+  .metrics span { font-size: 29px; }
+  .metrics strong { font-size: 10px; }
+  .metrics p { margin-top: 6px; font-size: 9px; line-height: 1.35; }
   .metrics { grid-template-columns: repeat(2, 1fr); }
   .result-gallery-heading { align-items: start; flex-direction: column; }
   .video-grid { grid-template-columns: 1fr; }
