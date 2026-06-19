@@ -10,7 +10,7 @@
   <title>Playful Agentic Robot Learning | RATs</title>
   <link rel="icon" type="image/png" href="assets/images/rats-logo.png">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/main.js?v=20260618-3"></script>
 </head>
 <body id="top">
   <header class="hero">
@@ -56,10 +56,10 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h5M9 13h6M9 17h6"/></svg>
           Paper
         </a>
-        <span class="button muted" aria-label="arXiv link coming soon">
+        <a class="button" href="https://arxiv.org/abs/2606.19419" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4l7 16M19 4l-7 16M8 10h8M7 14h10"/></svg>
-          arXiv soon
-        </span>
+          arXiv
+        </a>
       </nav>
     </div>
   </header>
@@ -80,7 +80,7 @@
           <strong>Contents</strong>
           <a href="#abstract">Abstract</a>
           <a href="#method">Method</a>
-          <a href="#deep-dive">Deep dive</a>
+          <a href="#deep-dive">Team</a>
           <a href="#results">Results</a>
           <a href="#analysis">Analysis</a>
           <a href="#bibtex">BibTeX</a>
@@ -160,19 +160,37 @@
     </section>
 
     <section class="section deep-dive-section" id="deep-dive">
-      <div class="narrow">
+      <div class="wide">
         <div class="section-heading">
           <h2>A team built around useful feedback</h2>
         </div>
-        <figure class="wide-figure">
-          <img src="assets/images/rats-method.png" alt="Detailed RATs method diagram">
+        <figure class="wide-figure team-figure">
+          <div class="team-diagram">
+            <img src="assets/images/rats-method.png" alt="Detailed RATs method diagram">
+            <span class="team-highlight team-highlight-primary" aria-hidden="true"></span>
+            <span class="team-highlight team-highlight-secondary" aria-hidden="true"></span>
+          </div>
           <figcaption>RATs couples task proposal, team execution, verification, diagnosis, and memory updates.</figcaption>
         </figure>
-        <div class="detail-grid">
-          <article><b>Planning</b><h3>Ground the attempt</h3><p>The planner turns each proposed task into ordered steps and retrieves only the skills relevant to those steps.</p></article>
-          <article><b>Execution</b><h3>Write and run code</h3><p>The Policy Writer generates executable robot-control programs. A SubAgent isolates persistent local bottlenecks.</p></article>
-          <article><b>Verification</b><h3>See what worked</h3><p>Goal and per-step verifiers separate final success from intermediate progress and make retries more targeted.</p></article>
-          <article><b>Memory</b><h3>Keep the useful parts</h3><p>Successful behavior becomes reusable code; failures become compact lessons that shape future practice.</p></article>
+        <div class="team-cycle">
+          <div class="team-cycle-return" aria-hidden="true">
+            <span>Next iteration</span>
+            <svg viewBox="0 0 1000 46" preserveAspectRatio="none">
+              <defs>
+                <marker id="team-cycle-arrowhead" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                  <path class="team-cycle-arrowhead" d="M0,0 L7,3.5 L0,7 Z"></path>
+                </marker>
+              </defs>
+              <path class="team-cycle-path" d="M990,43 C990,11 960,4 920,4 H80 C40,4 10,11 10,43" marker-end="url(#team-cycle-arrowhead)"></path>
+            </svg>
+          </div>
+          <div class="detail-grid">
+            <article data-team-step="proposal"><span class="team-step-number">01</span><b>Proposal</b><h3>Choose what to practice</h3><p>The Task Proposer finds novel, learnable objectives grounded in the current scene and prior experience.</p></article>
+            <article data-team-step="planning"><span class="team-step-number">02</span><b>Planning</b><h3>Ground the attempt</h3><p>The planner turns each proposed task into ordered steps and retrieves only the skills relevant to those steps.</p></article>
+            <article data-team-step="execution"><span class="team-step-number">03</span><b>Execution</b><h3>Write and run code</h3><p>The Policy Writer generates executable robot-control programs. A SubAgent isolates persistent local bottlenecks.</p></article>
+            <article data-team-step="verification"><span class="team-step-number">04</span><b>Verification</b><h3>See what worked</h3><p>Goal and per-step verifiers separate final success from intermediate progress and make retries more targeted.</p></article>
+            <article data-team-step="memory"><span class="team-step-number">05</span><b>Memory</b><h3>Keep the useful parts</h3><p>Successful behavior becomes reusable code; failures become compact lessons that shape future practice.</p></article>
+          </div>
         </div>
       </div>
     </section>
@@ -231,6 +249,12 @@
               <source src="assets/videos/open_drawer.mp4" type="video/mp4">
             </video>
             <h4>Open drawer</h4><p>Real-world manipulation with learned grasping and pulling routines.</p>
+          </article>
+          <article class="result-video" data-kind="real">
+            <video controls autoplay loop muted playsinline preload="metadata">
+              <source src="assets/videos/wipe_final.mp4" type="video/mp4">
+            </video>
+            <h4>Wipe plate</h4><p>Real-world plate wiping with reusable robot skills.</p>
           </article>
           <article class="result-video" data-kind="sim">
             <video controls autoplay loop muted playsinline preload="metadata">
@@ -313,7 +337,7 @@
           <pre><code>@article{rats2026playful,
   title   = {Playful Agentic Robot Learning},
   author  = {Zhang, Junyi and Ge, Jiaxin and Yoo, Hanjun and Fu, Letian and Yang, Zihan and Liu, Yaowei and Saravanan, Raj and Yin, Shaofeng and Yu, Justin and Niu, Dantong and Wang, Zirui and Herzig, Roei and Goldberg, Ken and Bai, Yutong and Chan, David M. and Stoica, Ion and Kanazawa, Angjoo and Lei, Jiahui and Feng, Haiwen and Darrell, Trevor},
-  journal = {arXiv preprint},
+  journal = {arXiv preprint arXiv:2606.19419},
   year    = {2026}
 }</code></pre>
         </div>
